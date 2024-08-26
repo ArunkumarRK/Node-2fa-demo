@@ -1,0 +1,18 @@
+<html lang-"en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2FA Setup</title>
+    </head>
+    <body>
+        <h1>2FA Setup</h1>
+        <img src="<%= qrCode %>" alt="QR Code">
+        <form action="/verify" method="post">
+            <input type="hidden" name="secret" value="<%= secret %>"/>
+            <label for="token">Enter OTP:</label>
+            <input type="text" id="token" name="token" required/>
+            <button type="submit">Verify OTP</button>
+
+        </form>
+    </body>
+</html>
